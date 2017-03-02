@@ -8,17 +8,17 @@ source:
 
 
 build:
-    number: 1
+    number: 2
 
 requirements:
     build:
         - python
-        - numpy
+        - numpy x.x
         - cbc
 
     run:
         - python
-        - numpy
+        - numpy x.x
         - cbc
 
 test:
