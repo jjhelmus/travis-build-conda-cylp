@@ -3,9 +3,9 @@ language:
 
 env:
     matrix:
-        - python=2.7 CONDA_PY=27 CONDA_NPY=17
-        - python=2.7 CONDA_PY=27 CONDA_NPY=18
-        - python=2.7 CONDA_PY=27 CONDA_NPY=19
+        - python=2.7 CONDA_PY=27 CONDA_NPY=110
+        - python=2.7 CONDA_PY=27 CONDA_NPY=111
+        - python=2.7 CONDA_PY=27 CONDA_NPY=112
 
     global:
         - secure: "SHkyD7R1ihMKB9Fk9a+qKKT4DMboFi6c9MhNIQyNvwvb9Si3LR0X+Ci2fwQuxws3b73y/jQrSV4NV3enb6/Kx3oR6nmrNn8h060u+EkP9x/fhSfZ+2QOHr0DcnHAD+fxJyyH4Gk4zPdu1wBEdFKVfgn1h6Ze3PZOjbkazNPQO2M="
@@ -17,4 +17,4 @@ script:
 
 after_success:
     - cp /Users/travis/miniconda/conda-bld/osx-64/*.tar.bz2 .
-    - binstar -t $BINSTAR_TOKEN upload --force *.tar.bz2
+    - anaconda -t $BINSTAR_TOKEN upload --force *.tar.bz2
